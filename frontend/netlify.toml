@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  VITE_NHOST_SUBDOMAIN = ""
+  VITE_NHOST_REGION = ""
+  VITE_HASURA_GRAPHQL_URL = ""
+  VITE_HASURA_WS_URL = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
