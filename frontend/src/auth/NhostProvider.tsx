@@ -1,0 +1,12 @@
+import { NhostClient, NhostReactProvider } from '@nhost/react';
+
+const nhost = new NhostClient({
+  subdomain: import.meta.env.VITE_NHOST_SUBDOMAIN,
+  region: import.meta.env.VITE_NHOST_REGION
+});
+
+export { nhost };
+
+export default function NhostProvider({ children }: { children: React.ReactNode }) {
+  return <NhostReactProvider nhost={nhost}>{children}</NhostReactProvider>;
+}
