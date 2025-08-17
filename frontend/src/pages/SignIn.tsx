@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig"; // ✅ make sure firebaseConfig.ts exists
-import logo from "../assets/AI.jpeg";
+import logo from "../assests/AI.jpeg";
 import "./Auth.css";
 
 export default function SignIn() {
@@ -58,3 +58,4 @@ export default function SignIn() {
     </div>
   );
 }
+
